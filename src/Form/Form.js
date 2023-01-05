@@ -4,7 +4,7 @@ import SignUp from './SignUp';
 
 function Form(){
     const num = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
-    const text = /^.{8,12}$/
+    const text = /^.{2,12}$/
 
     const [page, setPage] = useState(0)
     const [error, setError] = useState('')
