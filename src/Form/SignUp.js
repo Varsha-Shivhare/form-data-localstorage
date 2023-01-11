@@ -5,7 +5,7 @@ import './Form.css';
 function SignUp({form, setForm, setPage}){
 
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-    const password = /^.[a-zA-Z0-9-]{6,24}$/
+    const password = /^[a-zA-Z]{5,12}$/
 
     const [error, setError] = useState('')
     const msg = useState('')
@@ -24,7 +24,7 @@ function SignUp({form, setForm, setPage}){
     const checkPass = (e) => {
         setForm({...form, pass: e.target.value})
         if(password.test(form.pass) === false){
-            setError('Password must contain minimum 6 character with atleast one capital & small letter character along with number.')
+            setError('Password must contain atleast one capital & small letter character along with minimum 5 character.')
         }else{
             setError('')
             return true;
